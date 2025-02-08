@@ -1,0 +1,26 @@
+Є класс, що має наступні методи:
+public class Library {
+
+    public void addBook(Book book) {
+        // TODO implement method
+    }
+    public boolean removeBook(Book book) {
+        // TODO implement method
+    }
+    public List<Book> getBooks() {
+        // TODO implement method
+    }
+    public int getBookCount() {
+        // TODO implement method
+    }
+}
+    Створити класс Book, додати туди поля title, author. Конструктор, геттери, сеттери, equals, hashCode, **toString** - обов’язково.
+    Реалізувати всі методи класу Library , врахувати всі можливі кейси, коли на вхід приходять невірні параметри, null і т.д.
+    Сворити тестовий клас - LibraryTest. Покрити тестами всі основні сценарії роботи методів класу Library.
+
+public class LibraryTest {
+    // write your tests here
+}
+
+4.Запустити тести і пересвідчитися, що вони проходять.
+Готове завдання запушити в GitHub репозиторій і в LMS вказати посилання на нього.
