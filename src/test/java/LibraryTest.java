@@ -19,36 +19,36 @@ class LibraryTest {
     }
 
     @Test
-    void testAddBook() {
+    void givenBookAddedWhenAddBookThenBookCountIncreased() {
         library.addBook(book1);
         assertEquals(1, library.getBookCount());
         assertTrue(library.getBooks().contains(book1));
     }
 
     @Test
-    void testAddNullBook() {
+    void givenNullBookWhenAddBookThenThrowsException() {
         assertThrows(IllegalArgumentException.class, () -> library.addBook(null));
     }
 
     @Test
-    void testRemoveBook() {
+    void givenBookInLibraryWhenRemoveBookWhenBookRemoved() {
         library.addBook(book1);
         assertTrue(library.removeBook(book1));
         assertEquals(0, library.getBookCount());
     }
 
     @Test
-    void testRemoveNonExistentBook() {
+    void givenNoBookInLibraryWhenRemoveBookThenReturnFalse() {
         assertFalse(library.removeBook(book1));
     }
 
     @Test
-    void testRemoveNullBook() {
+    void givenNullBookWhenRemoveBookThenThrowsIllegalArgumentException() {
         assertThrows(IllegalArgumentException.class, () -> library.removeBook(null));
     }
 
     @Test
-    void testGetBooks() {
+    void givenBooksInLibraryWhenGetBooksThenBooksReturned() {
         library.addBook(book1);
         library.addBook(book2);
         assertEquals(2, library.getBookCount());
@@ -57,7 +57,7 @@ class LibraryTest {
     }
 
     @Test
-    void testGetBookCount() {
+    void givenBooksInLibraryWhenGetBookCountThenCorrectCountReturned() {
         assertEquals(0, library.getBookCount());
         library.addBook(book1);
         assertEquals(1, library.getBookCount());
